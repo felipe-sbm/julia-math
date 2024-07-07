@@ -6,9 +6,9 @@
 # 1. Variables
 # 2. Booleans
 
+# Later I will explain what this means.
 using Printf
 using Statistics
-
 
 # 1. Variables
 # Variables in Julia are defined using the following syntax:
@@ -50,6 +50,8 @@ changeX()  # Call the function
 # in logical operations, such as `and`, `or`, and `not`, to combine or negate boolean values.
 # Here's an example of using a boolean variable in Julia:
 
+#%%
+# Example 3 (booleans):
 is_raining = true
 
 if is_raining
@@ -57,11 +59,55 @@ if is_raining
 else
     println("No need for an umbrella today.")
 end
+#%%
 
 #In this example, the program checks the value of the `is_raining` boolean variable.
 # If it is `true`, it prints the message "Remember to take an umbrella!".
 # Otherwise, it prints "No need for an umbrella today.".
 # Booleans in Julia are defined using the following syntax:
 # variable_name = true or variable_name = false
-# The value of the variable can be changed at any time.
-# Look these examples below:
+# The value of the variable can be changed at any time, and can be used into functions.
+# Look this example below:
+
+#%%
+# Example 4 (booleans in functions):
+function isEven(x) ## Function that checks if a number is even
+    if x % 2 == 0
+        return true
+    else
+        return false
+    end
+end
+
+isEven(x) # Call the function
+#%%
+
+# 3. Number types
+# In Julia, numbers can be represented using different types, such as integers, floating-point numbers,
+# and complex numbers. The type of a number determines how it is stored in memory and how it can be used
+# in calculations. Some common number types in Julia include:
+# - Integers: Whole numbers without a decimal point, such as 1, 2, 3, -1, -2, -3.
+# - Floating-point numbers: Numbers with a decimal point, such as 1.0, 2.5, 3.14, -1.0, -2.5, -3.14.
+# - Complex numbers: Numbers with a real and imaginary part, such as 1 + 2im, 3.14 + 2.5im.
+# The type of a number can be checked using the `typeof()` function in Julia. Here's an example of
+# using different number types in Julia:
+
+# In Julia, numbers are represented by various types. Here’s a brief overview:
+# Integer Types: These are used to represent whole numbers. Julia provides signed
+# and unsigned integers of different sizes. Here are some examples:
+
+# Int8, Int16, Int32, Int64, Int128: These are signed integers, meaning they can be both positive and negative.
+# The number after Int represents the number of bits that type uses.
+# UInt8, UInt16, UInt32, UInt64, UInt128: These are unsigned integers, meaning they can only be positive.
+
+# Floating-Point Types: These are used to represent real numbers (numbers with fractions).
+# Julia provides two main types of floating-point numbers:
+# Float32, Float64: These represent 32-bit and 64-bit floating-point numbers respectively.
+
+# Complex and Rational Types: These are more specialized numeric types used for specific mathematical purposes:
+# Complex: This is used to represent complex numbers, which have both a real and an imaginary component.
+# Rational: This is used to represent rational numbers, which are represented as a fraction of two integers.
+
+# Each type has its own range and precision, and the appropriate type to use depends on the specific requirements of your program.
+# It’s also worth noting that Julia supports arbitrary precision arithmetic using the BigInt and BigFloat types.
+# These types aren’t fixed-size and can be used when you need to perform computations that require a high degree of precision.
