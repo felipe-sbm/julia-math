@@ -1,6 +1,6 @@
 # Ladies and gentlemen, welcome to the Julia tutorial.
 # This tutorial is based on the Julia tutorial by Derek Banas.
-# The tutorial is available at https://www.youtube.com/watch?v=8h8rQyEpiZA
+# The tutorial is available at https://youtu.be/sE67bP2PnOo?si=Q7JCCYQdpHfWHVP6
 # Here I will resume the tutorial, and teache you how to use Julia.
 # The tutorial is divided in the following sections:
 # 1. Variables
@@ -79,11 +79,11 @@ function isEven(x) ## Function that checks if a number is even
     end
 end
 
-isEven(x) # Call the function
+isEven(4) # Call the function with an argument
 #%%
 
-# 3. Number types
-# In Julia, numbers can be represented using different types, such as integers, floating-point numbers,
+# 3. Number and characters types
+# In Julia, numbers and characters can be represented using different types, such as integers, floating-point numbers,
 # and complex numbers. The type of a number determines how it is stored in memory and how it can be used
 # in calculations. Some common number types in Julia include:
 # - Integers: Whole numbers without a decimal point, such as 1, 2, 3, -1, -2, -3.
@@ -111,3 +111,40 @@ isEven(x) # Call the function
 # Each type has its own range and precision, and the appropriate type to use depends on the specific requirements of your program.
 # It’s also worth noting that Julia supports arbitrary precision arithmetic using the BigInt and BigFloat types.
 # These types aren’t fixed-size and can be used when you need to perform computations that require a high degree of precision.
+# Here’s an example of using different number types in Julia:
+
+#%%
+# Example 5 (character):
+char_example = Char(120) ## The value of the variable is a character
+println(char_example) ## Prints the value of the variable
+#%%
+
+#%%
+# Example 6 (integers numbers):
+int_example = UInt8(trunc(π)) ## The value of the variable π is an integer
+println(int_example) ## Prints the value of the variable
+#%%
+
+#%%
+# Example 7 (float numbers):
+float_example = Float64(π) ## The value of the variable π is a float number
+println(float_example) ## Prints the value of the variable
+#%%
+
+#%%
+# Example 8 (number to parse):
+number_to_parse = parse(Float64, "2518,577") ## The value of the variable is a float number
+println(number_to_parse) ## Prints the value of the variable
+#%%
+
+# 4. Strings
+# In Julia, strings are sequences of characters enclosed in double quotes (") or triple double quotes (""").
+# Strings can contain letters, numbers, symbols, and whitespace characters. They are used to represent text
+# data in a program. Strings can be manipulated using various string functions and operations in Julia.
+# Here's an example of using strings in Julia:
+
+#%%
+# Example 8 (string):
+string_example = "Hello, world,\n here's the 2518 vibes!" ## The value of the variable is a string
+println(string_example) ## Prints the value of the variable
+#%%
